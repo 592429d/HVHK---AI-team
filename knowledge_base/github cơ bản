@@ -1,0 +1,17 @@
+git init: tao folder .git 
+.git la con tro toi g
+
+git clone: clone repo tren mang ve may
+vd git clone https://github.com/592429d/HVHK---AI-team
+Nếu repository đó ở máy chủ khác:
+git clone tênusername@địachỉmáychủ:/đường-dẫn-đến/repositoryithub
+*trong folder clone ve se co .git
+
+
+thao tác trên thư mục như bth, sau đó muốn up lên github thì cd sang folder repo đang làm việc
+git add .  : đóng gói tất cả những thay đổi, bao gồm cả xóa,... chuẩn bị để commit
+nếu chưa git add mà commit sẽ ko dc , thử dùng git status sẽ thấy báo lỗi untracked files nhảy chữ đỏ l
+
+git commit -m "message" : xác nhận sự thay đổi vô git trong máy, chưa up lên web
+git push: up thư mục làm việc hiện tại (repo hiện tại) lên github 
+
