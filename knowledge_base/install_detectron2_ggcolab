@@ -1,0 +1,49 @@
+!sudo apt-get update
+
+## build detectron2 from source, follow link: https://detectron2.readthedocs.io/en/latest/tutorials/install.html
+
+# install gcc 9.3.0      g++ 9.3.0  (prepare to build detectron2) 
+!sudo apt update
+!sudo apt install build-essential
+
+# install ninja (use for faster build detectron2)
+!sudo apt install ninja-build
+
+# install detectron2
+!python -m pip install 'git+https://github.com/facebookresearch/detectron2.git' --user
+
+
+## install detectron2 requirements (follow link: https://github.com/facebookresearch/detectron2/blob/master/docs/requirements.txt)
+!python -c "import numpy; print(numpy.__version__)"
+!pip install termcolor
+!pip install numpy
+!pip install tqdm
+!pip install docutils==0.16
+!pip install sphinx==3.2.0
+!pip install recommonmark==0.6.0
+!pip install sphinx_rtd_theme
+!pip install matplotlib
+!pip install yacs
+!pip install tabulate
+!pip install cloudpickle
+!pip install Pillow
+!pip install future
+!pip install git+git://github.com/facebookresearch/fvcore.git
+!pip install omegaconf
+!pip install hydra-core
+!pip install black
+
+# torch 1.7.0 for cpu 
+!pip install https://download.pytorch.org/whl/cpu/torch-1.7.0%2Bcpu-cp37-cp37m-linux_x86_64.whl
+
+# torch vision 0.8.1 for cpu
+!pip install https://download.pytorch.org/whl/cpu/torchvision-0.8.1%2Bcpu-cp37-cp37m-linux_x86_64.whl
+
+# install onnx (khong biet de lam gi nhung anh phuoc keu vay)
+!pip install onnx
+
+# Cuda 11.0 is pre-installed on google colab
+!nvcc --version
+
+# cudnn 7.6.5 is pre-installed on google colab
+!cat /usr/include/cudnn.h | grep CUDNN_MAJOR -A 2
